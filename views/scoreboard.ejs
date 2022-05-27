@@ -1,0 +1,34 @@
+
+<div class="main" id="main" >
+    <input type="text" id="myInput" onkeyup="searchnick()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th>Rank</th>
+    <th style="width:33%;">Name</th>
+    <th style="width:33%;">Country</th>
+    <th style="width:33%;">score</th>
+  </tr>
+ 
+  <% for (var i = 0; i < users.length; i++) { %>
+
+  <tr>
+   
+    <td><%= i+1 %></td>
+    <td ><a href="<%=`/user/${users[i].username}`%>"><%= users[i].username %></a></td>
+    
+    <td><%= users[i].country %></td>
+    <td><%= users[i].score %></td>
+    
+
+  </tr>
+  <% } %>
+ 
+  </tr>
+</table>
+
+</div>
+
+
+
+

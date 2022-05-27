@@ -1,0 +1,21 @@
+
+    <div class="main" id="main">
+      <h1 >MonaCtf</h1>
+      <p>MonaCtf is a web application that allows testing known vulnerabilities on real applications. Apart from being able to solve generated questions, also if you have a security vulnerability you find. You can pose this vulnerability as a challenge and contribute to other users' learning. </p>
+      <ul class="container flex">
+        <% for (var i = 0; i < challenges.length; i++) { %>
+
+        <li class="item flex-item"><div class="containers">
+          <img src= <%= challenges[i].file %> alt="Avatar" class="image">
+          <div class="overlay">
+            
+            <a href= <%= challenges[i].filename %> class="text"><%= challenges[i].name%></a>
+          </div></li>
+        <% } %>
+
+        
+                    
+        
+       
+      
+   

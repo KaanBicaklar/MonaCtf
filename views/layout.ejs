@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+    <div class="topnav" id="topnav">    
+        <a href="/scoreboard"id="1"  name="scoreboard" onclick=isActive(1); class="active">Scoreboard</a>
+        <a href="/challenge"id="2"  name="challange" onclick=isActive(2);>Challange</a>
+        <%if(displayLink){%>
+        <a href="/login"id="3"  name="login" onclick=isActive(3);>Login</a>
+        
+        <a href="/"id="4" name="about" onclick=isActive(4)>Welcome</a>
+        <%}%>
+        <%if(!displayLink){%>
+            <a href="/logout"id="3" name="about" onclick=isActive(3)>logout</a>
+
+            <%}%>
+        <div class="icons">
+            <h3> <a href="<%=`/user/${username}`%>"><%=username%>&nbsp;&nbsp;&nbsp;&nbsp;</a></h3>
+            <img src="mona.ico" width="50"  height=""alt="MonaCtf">
+        </div>
+        </div>
+<%- body%>
+
+<div class="footer">
+<p> MonaCtf </p>
+</div>
+</div>
+<script>
+function searchnick() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+
+      }}}}
+
+
+
+    function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+    function isActive(id) {
+         
+        
+
+        var x = document.getElementById(id);
+
+        for (var i = 1; i <= 4; i++) {
+            if(i==id){
+                x.classList.add("active");
+            }
+            else{
+                document.getElementById(i).classList.remove("active");
+            }
+        }
+           
+            
+        }
+        
+        
+        
+
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+document.getElementById("defaultOpen").click();
+      function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+        
+        
+        
+    </script>
+</body>
+</html>

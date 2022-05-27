@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="topnav" id="topnav">
+      <a href="/scoreboard" id="1" name="scoreboard" onclick=isActive(1);>Scoreboard</a>
+      <a href="/challenge" id="2" name="challenge" onclick=isActive(2);>Challenge</a>
+      <a href="/login" id="3" name="login" onclick=isActive(3);>Login</a>
+      <a href="/" id="4" name="about" onclick=isActive(4); class="active">Welcome</a>
+      <div class="icons">
+        <h3>MonaCtf &nbsp;</h3>
+        <img src="/mona.ico" width="50" height="" alt="MonaCtf">
+      </div>
+    </div>
+    <div class="main" id="main">
+     <h1>Welcome Hacker</h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque sequi ipsam repellendus, sapiente earum molestias voluptas rerum nostrum sed accusantium quisquam ratione consequatur officiis praesentium optio deleniti magnam. Quas.</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quis veniam magnam qui aspernatur iusto exercitationem, necessitatibus fugiat debitis, laborum similique minus consectetur doloribus possimus eveniet numquam sed ab? Quos.</p>
+       <button type="button" onClick="parent.location='/scoreboard'">view scoreboard</button>
+       <button type="button" onClick="parent.location='/challenge'">view challanges</button>
+
+
+      </div>
+      
+   
+      
+  
+    <div class="footer">
+      <p> MonaCtf </p>
+    </div>
+    </div>
+    <script>
+     
+
+      function isActive(id) {
+        var x = document.getElementById(id);
+        for (var i = 1; i <= 4; i++) {
+          if (i == id) {
+            x.classList.add("active");
+          } else {
+            document.getElementById(i).classList.remove("active");
+          }
+        }
+      }
+
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<div class="main" id="main">
+    <div class="row">
+      <div class="column"style="background-color:rgb(6, 14, 30);">
+        
+        <h1>Rank: <%=rank%></h1>
+        <% if (user.score >= 100) { %>
+            <h1>Level: pro hacker</h1>
+        <% } else if (user.score >= 50) { %>
+            <h1>Level: hacker</h1>
+        <% } else { %>
+            <h1> Level: Script kiddie</h1>
+        <% } %>
+        
+        <h1>Username: <%= user.username%></h1>
+        <h1>Country: <%= user.country%></h1>
+            
+        
+      </div>
+    </div>
+      
+    </div>
